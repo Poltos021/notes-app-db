@@ -1,0 +1,121 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+.container {
+	box-shadow: 1px 2px 12px rgba(0,0,0,.4), 1px 2px 24px rgba(0,0,0,.4);
+	border-radius: 12px;
+	height: 96vh;
+	margin: 2vh auto;
+	width: 400px;
+	position: relative;
+	overflow: hidden;
+}
+
+.container-scroller {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	padding: 10px 10px 0;
+}
+
+.container-scroller::-webkit-scrollbar {
+	display: none;
+}
+
+.note {
+	display: block;
+	text-decoration: none;
+	color: black;
+	background: rgba(235,225,255, 1);
+	border-radius: 4px;	
+	padding: 10px;
+	margin-bottom: 10px;
+	box-shadow: 0 2px 10px rgba(0,0,0,.2);
+	overflow: hidden;
+	max-height: calc( (96vh - 10px) / 4 - 10px);
+}
+
+.note h3 {
+	padding: 10px 0;
+	font-size: 32px;
+	line-height: 32px;
+}
+.note p {
+	overflow: hidden;
+}
+
+.button-add {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	width: 60px;
+	height: 60px;
+	background: rgb(20, 170, 10);
+	line-height: 60px;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	/*font-weight: bold;*/
+	border-radius: 99999px;
+	font-size: 50px;
+	box-shadow: 1px 3px 28px rgba(0,0,0,.5), 1px 2px 12px rgba(0,0,0,.3);
+}
+
+h2 {
+	padding: 12px 16px;
+	font-size: 36px;
+	line-height: 36px;
+}
+
+input[type=text],
+textarea {
+	width: calc(100% - 20px);
+	padding: 10px;
+	margin: 10px 10px 0;
+	border-radius: 6px;
+	border: none;
+	box-shadow: 0px 1px 4px rgba(0,0,0,.2) inset;
+	transition: .2s;
+}
+input[type=text]:focus,
+textarea:focus {
+	outline: none;
+	box-shadow: 0px 1px 5px rgba(50,90,250,.6) inset;
+
+}
+
+textarea {
+	height: 200px;
+}
+
+button, .button {
+	padding: 10px;
+	margin: 10px 10px 0 0;
+	border-radius: 6px;
+	background: rgba(50,90,250,1);
+	color: white;
+	border: none;
+	box-shadow: 0px 1px 6px rgba(0,0,0,.4);
+	transition: .2s;
+	text-decoration: none;
+}
+button:hover {
+	box-shadow: 1px 2px 12px rgba(0,0,0,.4);
+}
+
+.button.red {
+	background: rgba(250,50,90,1);
+}
+.button.gray {
+	background: rgba(110,110,110,1);
+}
+
+.block {
+	margin: 10px 10px 0;
+}
