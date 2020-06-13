@@ -1,10 +1,7 @@
 <div class="container-scroller">
 
-	<h2>Test Note Title</h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat.</p>
+	<h2><?=$note->title ?></h2>
+	<p><?=$note->text ?>.</p>
 
 <br>
 <br>
@@ -12,7 +9,4 @@
 		<a href="?" class="button gray">&larr; Назад</a>
 		<a href="?action=edit" class="button">Редактировать</a>
 		<a href="?action=delete" class="button red">Удалить</a>
-
-	
-
 </div>

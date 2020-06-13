@@ -1,1 +1,3 @@
 <?php
+
+$notes = Note::getAll();

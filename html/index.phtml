@@ -1,45 +1,12 @@
 <div class="container-scroller">
-	<a href="#" class="note">
-		<h3>Test Note Title</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat.</p>
-	</a>
-	<a href="#" class="note">
-		<h3>Test Note Title</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat.</p>
-	</a>
-	<a href="#" class="note">
-		<h3>Test Note Title</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat.</p>
-	</a>
-	<a href="#" class="note">
-		<h3>Test Note Title</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat.</p>
-	</a>
-	<a href="#" class="note">
-		<h3>Test Note Title</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat.</p>
-	</a>
-	<a href="#" class="note">
-		<h3>Test Note Title</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat.</p>
-	</a>	
+
+    <?php foreach($notes as $note) {?>
+
+        <a href="?action=view&id=<?=$note->id?>" class="note">
+            <h3><?=$note->title ?></h3>
+            <p><?=$note->text ?></p>
+        </a>
+
+    <?php } ?>
 </div>
 <a class="button-add" href="?action=add">+</a>
