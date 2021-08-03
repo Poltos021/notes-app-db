@@ -2,11 +2,11 @@
 
 <form method="post">
 
-	<input type="text" name="title" placeholder="Название заметки">
-	<textarea name="text" placeholder="Текст заметки"></textarea>
+	<input type="text" name="title" placeholder="Название заметки" value="<?=$note->title?>">
+	<textarea name="text" placeholder="Текст заметки"><?=$note->text?></textarea>
 	
 	<div class="block">
-		<button type="submit">Добавить</button>
+		<button type="submit">Сохранить</button>
 	</div>
 
 </form>

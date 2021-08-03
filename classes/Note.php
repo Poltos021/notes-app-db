@@ -45,4 +45,36 @@ class Note
 
     }
 
+    public function insert()
+    {
+        $sql = 'INSERT INTO `notes` (`title`, `text`) VALUES (?, ?)';
+        $prepaired = DB::get()->prepare($sql);
+        $result = $prepaired->execute([
+            $this->title, 
+            $this->text]);
+
+        $this->id = DB::get()->lastInsertId();
+
+        return $result;
+    }
+
+    public function delete(){
+        $sql = 'DELETE FROM `notes` WHERE id = ' . $this->id;
+        DB::get()->query($sql);
+    }
+
+    public function update(){
+        $sql = 'UPDATE `notes` SET `title`=:title, `text`=:text WHERE `id`=:id';
+        $prepared = DB::get()->prepare($sql);
+        $prepared->execute([
+            'id' => $this->id,
+            'title' => $this->title,
+            'text' => $this->text
+        ]);
+    }
+
+    public function save()
+    {
+        //не доработано
+    }
 }
